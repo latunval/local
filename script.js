@@ -7,26 +7,26 @@ function Show() {
     // return show()
 }
 
-// let setup = document.getElementById('load');
-// let punchline = document.getElementById('text');
+let setup = document.getElementById('load');
+let punchline = document.getElementById('text');
 
-// async function joke() {
-//     try {
-//         const request = await fetch('https://official-joke-api.appspot.com/random_joke');
-//     const deliver = await request.json();
-//      setup.textContent = deliver.setup;
-//      punchline.textContent = deliver.punchline;
-//     // console.log("Lists of joke are :", deliver);
-//     return deliver;
-//     } catch (error) {
-//         document.getElementById('error').innerText = 'error fetching jokes:'
-//     document.querySelectorAll('p').style.color = "red";
+async function joke() {
+    try {
+        const request = await fetch('https://official-joke-api.appspot.com/random_joke');
+    const deliver = await request.json();
+     setup.textContent = deliver.setup;
+     punchline.textContent = deliver.punchline;
+    // console.log("Lists of joke are :", deliver);
+    return deliver;
+    } catch (error) {
+        document.getElementById('error').innerText = 'error fetching jokes:'
+    document.querySelectorAll('p').style.color = "red";
 
-//         // console.error('error fetching jokes:', error);
-// };
-// };
-// // joke()
-// setInterval(joke, 6000);
+        // console.error('error fetching jokes:', error);
+};
+};
+// joke()
+setInterval(joke, 3000);
 
 let userName = document.getElementById('fname');
 
@@ -84,24 +84,24 @@ let user = document.getElementById('user') ;
     loadAll()
   }
 
-let setup = document.getElementById('load');
-let punchline = document.getElementById('text');
+// let setup = document.getElementById('load');
+// let punchline = document.getElementById('text');
 
-async function joke() {
-    try {
-        const request = await fetch(data.json)
-    const deliver = await request.json();
-     setup.textContent = deliver.setup;
-     punchline.textContent = deliver.punchline;
-     document.getElementById('text').style.color = "green"
-    // console.log("Lists of joke are :", deliver);
-    return deliver;
-    } catch (error) {
-        document.getElementById('error').innerText = 'error fetching jokes:'
-    document.getElementById('error').style.color = "red";
+// async function joke() {
+//     try {
+//         const request = await fetch(data.json)
+//     const deliver = await request.json();
+//      setup.textContent = deliver.setup;
+//      punchline.textContent = deliver.punchline;
+//      document.getElementById('text').style.color = "green"
+//     // console.log("Lists of joke are :", deliver);
+//     return deliver;
+//     } catch (error) {
+//         document.getElementById('error').innerText = 'error fetching jokes:'
+//     document.getElementById('error').style.color = "red";
 
-        // console.error('error fetching jokes:', error);
-};
-};
-// joke()
-setInterval(joke, 6000);
+//         // console.error('error fetching jokes:', error);
+// };
+// };
+// // joke()
+// setInterval(joke, 6000);
